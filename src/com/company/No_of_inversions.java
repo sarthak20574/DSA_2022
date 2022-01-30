@@ -19,53 +19,61 @@ public class No_of_inversions {
         return ans;
     }
 
+    static long inversionCount(long arr[], long N)
+    {
 
-    int noInInversions(int[] arr, int l, int h){
 
-        int ans=0;
+        return noInInversions(arr, 0, (int)N-1);
+    }
+
+
+    static long noInInversions(long[] arr, int l, int h){
+
+        long ans=0;
         if(l<h){
-            int mid= l+(h-l)/2;
+            int mid= (l+(h-l)/2);
 
-            ans+=noInInversions(arr, l,mid);
-            ans+= noInInversions(arr, mid+1, h);
-             ans+= merge(arr, l, h,mid);
+            ans=(ans+noInInversions(arr, l,mid))%1000000007;
+            ans= (ans+noInInversions(arr, mid+1, h))%1000000007;
+            ans= (ans+merge(arr, l, h,mid))%1000000007;
         }
-        return ans;
+        return ans%1000000007;
 
     }
 
-    private int merge(int[] arr, int l, int h, int mid) {
+    static private long merge(long[] arr, int l, int h, int mid) {
 
+//        long[] left = Arrays.copyOfRange(arr, l, mid+1);
+        // System.out.println(Arrays.toString(left));
 
-        int[] left = Arrays.copyOfRange(arr, l, mid);
-        System.out.println(Arrays.toString(left));
+        long[] left = Arrays.copyOfRange(arr, l, mid+1);
+        // System.out.println(Arrays.toString(left));
 
-        int[] right= Arrays.copyOfRange(arr,mid,h);
-        System.out.println(Arrays.toString(right));
+        long[] right= Arrays.copyOfRange(arr,mid+1,h+1);
+        //System.out.println(Arrays.toString(right));
 
-        int noOfInversions=0;
+        long noOfInversions=0;
 
         int i=0, j=0, indexOfMainArr=l ;
         while (i<left.length && j<right.length){
 
-            if( right[i]>=left[j]){
+            if( right[j]>=left[i]){
 
                 arr[indexOfMainArr++]= left[i++];
             }
             else {
                 arr[indexOfMainArr++]=right[j++];
-                noOfInversions+=(mid + 1) - (l + i);
-               // noOfInversions+=left.length-i;
-            }
-
-            while (i<left.length){
-                arr[indexOfMainArr++]= left[i++];
-            }
-            while (j<right.length){
-                arr[indexOfMainArr++]=right[j++];
+                //noOfInversions+=(mid + 1) - (l + i);
+                noOfInversions=(noOfInversions+left.length-i)%1000000007;
             }
         }
+        while (i<left.length){
+            arr[indexOfMainArr++]= left[i++];
+        }
+        while (j<right.length){
+            arr[indexOfMainArr++]=right[j++];
+        }
 
-        return noOfInversions;
+        return noOfInversions%1000000007;
     }
 }

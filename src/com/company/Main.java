@@ -10,78 +10,12 @@ import java.util.StringTokenizer;
 
 public class Main {
 
-//    static class Activity{
-//        int mem_needed;
-//        int mem_added;
-//
-//        public Activity(int mem_needed, int mem_added){
-//            this.mem_needed = mem_needed;
-//            this.mem_added = mem_added;
-//        }
-//    }
-//
-//    static class Compare{
-//
-//        static void compare(Activity[] arr, int n){
-//
-//            Arrays.sort(arr, new Comparator<Activity>() {
-//                @Override
-//                public int compare(Activity o1, Activity o2) {
-//                    return o1.mem_needed-o2.mem_needed;
-//                }
-//            });
-//        }
-//    }
- //   static void printMaxActivities(Activity arr[], int n, int max_mem){
-
-
-//        int ii=0;
-//        while (ii<n){
-//
-//            System.out.println(arr[ii].mem_needed+" "+arr[ii].mem_added);
-//            ii++;
-//        }
-
-       // Compare.compare(arr, n);
-
-//        int i=0;
-//        while (i<n){
-//
-//            System.out.println(arr[i].mem_needed+" "+arr[i].mem_added);
-//            i++;
-//        }
-
-//        int i=0;
-//        while (i<n && arr[i].mem_needed<=max_mem){
-//                max_mem+=arr[i].mem_added;
-//            //System.out.println(arr[i].mem_needed+" "+arr[i].mem_added);
-//            i++;
-//        }
-//        System.out.println(max_mem);
-//
-//    }
-//
-//    public static Activity[] load(int[] start, int[] end){
-//        int n=start.length;
-//        Activity[] activities= new Activity[n];
-//        for(int i=0 ; i< n; i++){
-//            activities[i]= new Activity(start[i], end[i]);
-//        }
-//        return activities;
-//    }
-//
-//
-
-
-
-
 
     public static void main(String[] args) throws IOException {
-        
-        int[] arr = {3,5,1,4,2};
 
-        No_of_inversions obj = new No_of_inversions();
-        System.out.println(obj.noInInversions(arr,0,arr.length));
+
+
+
 
 
 
