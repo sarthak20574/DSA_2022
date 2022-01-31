@@ -12,10 +12,10 @@ Practice Questions: (in random order)
 https://leetcode.com/problems/maximum-subarray/
 https://leetcode.com/problems/sort-colors/
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
-https://practice.geeksforgeeks.org/problems/inversion-of-array-1587115620/1/
+https://practice.geeksforgeeks.org/problems/inversion-of-array-1587115620/1/     doing but some error
 https://www.interviewbit.com/problems/subarray-with-given-xor/
 https://leetcode.com/problems/longest-substring-without-repeating-characters/
-https://practice.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1
+https://practice.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1               doing
 https://leetcode.com/problems/search-a-2d-matrix/
 https://www.geeksforgeeks.org/move-zeroes-end-array/
 https://www.interviewbit.com/problems/next-permutation/

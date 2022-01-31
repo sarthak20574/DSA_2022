@@ -33,11 +33,11 @@ public class No_of_inversions {
         if(l<h){
             int mid= (l+(h-l)/2);
 
-            ans=(ans+noInInversions(arr, l,mid))%1000000007;
-            ans= (ans+noInInversions(arr, mid+1, h))%1000000007;
-            ans= (ans+merge(arr, l, h,mid))%1000000007;
+            ans=(ans+noInInversions(arr, l,mid));
+            ans= (ans+noInInversions(arr, mid+1, h));
+            ans= (ans+merge(arr, l, h,mid));
         }
-        return ans%1000000007;
+        return ans;
 
     }
 
@@ -64,7 +64,7 @@ public class No_of_inversions {
             else {
                 arr[indexOfMainArr++]=right[j++];
                 //noOfInversions+=(mid + 1) - (l + i);
-                noOfInversions=(noOfInversions+left.length-i)%1000000007;
+                noOfInversions=(noOfInversions+left.length-i);
             }
         }
         while (i<left.length){
@@ -74,6 +74,6 @@ public class No_of_inversions {
             arr[indexOfMainArr++]=right[j++];
         }
 
-        return noOfInversions%1000000007;
+        return noOfInversions;
     }
 }
