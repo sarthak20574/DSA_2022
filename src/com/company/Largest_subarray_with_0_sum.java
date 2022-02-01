@@ -1,6 +1,8 @@
 package com.company;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class Largest_subarray_with_0_sum {
@@ -58,6 +60,79 @@ public class Largest_subarray_with_0_sum {
 
 
     //You are given an array arr[] of size n. Find the total count of sub-arrays having their sum equal to 0.
+    public static long findSubarray(long[] arr ,int n)
+    {
+        long ans=0;
+        long sum=0;
+
+        Map<Long, Long> longMap= new HashMap<>();
+        longMap.put(0L, 1L);
+
+        for( int i=0 ; i< n; i++){
+            sum+=arr[i];
+            if( longMap.containsKey(sum)){
+                ans+=longMap.get(sum);
+                longMap.put(sum, longMap.get(sum)+1);
+            }
+            else {
+                longMap.put(sum,1L);
+            }
+        }
+
+        return ans;
+    }
+
+
+    //find the length of the largest subarray with 0 sum
+    static int maxLen(int arr[]){
+
+        int length= arr.length, sum=0, max=0;
+        Map<Integer, Integer> integerMap= new HashMap<>();
+        integerMap.put(0,-1);
+        // -1 1 -1 1 as  so correct output is 4 but with .put(0,0) code gives 3, as the cumulative sum should be -1 0 -1 0
+        //so the length of the 2 sub arrays should be 2 and 4 but the code gives 1 and 3
+
+        for( int i=0 ; i<length; i++){
+            sum+=arr[i];
+            if(integerMap.containsKey(sum)){
+                if( i-integerMap.get(sum)>max){
+                    max=i-integerMap.get(sum);
+                }
+            }
+            else {
+                integerMap.put(sum,i);
+            }
+
+        }
+        return max;
+    }
+
+
+// Print all subarrays with 0 sum
+
+    static int printSubarraysWithSum0(int arr[]){
+
+        int length= arr.length, sum=0, max=0;
+        Map<Integer, Integer> integerMap= new HashMap<>();
+        integerMap.put(0,-1);
+        // -1 1 -1 1 as  so correct output is 4 but with .put(0,0) code gives 3, as the cumulative sum should be -1 0 -1 0
+        //so the length of the 2 sub arrays should be 2 and 4 but the code gives 1 and 3
+
+        for( int i=0 ; i<length; i++){
+            sum+=arr[i];
+            if(integerMap.containsKey(sum)){
+                if( i-integerMap.get(sum)>max){
+                    max=i-integerMap.get(sum);
+                }
+            }
+            else {
+                integerMap.put(sum,i);
+            }
+
+        }
+        return max;
+    }
+
 
 
 }
