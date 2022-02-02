@@ -13,6 +13,29 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
+        int x=5,last_bit, count_of_1=0,digits_destoryed=0,ans=-1;
+
+        while(x>0){
+            last_bit=x%2;
+            x=x/2;
+            digits_destoryed++;
+            if(last_bit==1){
+                count_of_1++;
+                ans=digits_destoryed;
+            }
+        }
+        if(count_of_1==1){
+            System.out.println(ans);
+            //return ans;
+        }
+        else {
+            System.out.println(-1);
+            //return -1;
+        }
+
+        System.out.println(a_given_number_is_power_of_2.isPowerofTwo(549755813888L));
+
+
 
 
 //        int arr[] = { 15, -2, 2, -8, 1, 7, 10, 23 };
