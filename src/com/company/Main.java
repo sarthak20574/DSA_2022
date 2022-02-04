@@ -4,27 +4,49 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class Main {
 
 
+    static boolean f(long n){
+        if (n <= 3)
+            return true;
+
+
+        if ( n % 3 == 0 || n % 2 == 0 )
+            return false;
+
+        for (int i = 5; i * i <= n; i = i + 6)
+
+            if ( n % (i + 2) == 0 || n % i == 0)
+                return false;
+
+        return true;
+    }
+
+
     public static void main(String[] args) throws IOException {
 
-        System.out.println(Excel_Sheet_part1_gfg.excelColumn(26));
-        System.out.println(Excel_Sheet_part1_gfg.excelColumn(51));
-        System.out.println(Excel_Sheet_part1_gfg.excelColumn(52));
-        System.out.println(Excel_Sheet_part1_gfg.excelColumn(80));
-        System.out.println(Excel_Sheet_part1_gfg.excelColumn(676));
-        System.out.println(Excel_Sheet_part1_gfg.excelColumn(702));
-        System.out.println(Excel_Sheet_part1_gfg.excelColumn(705));
+        Reader.init(System.in);
+
+            int no_gangs =Reader.nextInt();
+
+            for (int j=0 ;j<no_gangs; j++){
+               long x=Reader.nextInt();
+
+               //if( x==2) return;
+               while (!f(x)){
+
+                   x++;
+               }
+                System.out.println(x);
+
+            }
 
 
-//        int arr[] = { 15, -2, 2, -8, 1, 7, 10, 23 };
-//        int n = arr.length;
-//        System.out.println(Largest_subarray_with_0_sum.subarray_with_sum_0(arr,arr.length));
+
 
 //        Reader.init(System.in);
 //        int tests=Reader.nextInt();
@@ -32,7 +54,7 @@ public class Main {
 //        for (int i=0 ; i<tests; i++) {
 //            int n = Reader.nextInt();
 //            int x = Reader.nextInt();
-//            String str = Reader.nextLine();
+//            String str = Reader.nextLine();!
 //
 //            if( n<x) {
 //                System.out.println(0);
@@ -152,14 +174,6 @@ public class Main {
 //        merge2sortedarrayswithoutusinganyspace p= new merge2sortedarrayswithoutusinganyspace();
 //        p.map_method(a,b,size,size1);
 
-
-
-//        Greedy obj= new Greedy();
-//
-//        int[] wt = { 10, 40, 20, 30 };
-//        int[] val = { 60, 40, 100, 120 };
-//        int capacity = 50;
-//        System.out.println(obj.getMaxValue(wt, val, capacity));
 
     }
 
