@@ -10,40 +10,44 @@ import java.util.StringTokenizer;
 public class Main {
 
 
-    static boolean f(long n){
-        if (n <= 3)
-            return true;
-
-
-        if ( n % 3 == 0 || n % 2 == 0 )
-            return false;
-
-        for (int i = 5; i * i <= n; i = i + 6)
-
-            if ( n % (i + 2) == 0 || n % i == 0)
-                return false;
-
-        return true;
-    }
+//    static boolean f(long n){
+//        if (n <= 3)
+//            return true;
+//
+//
+//        if ( n % 3 == 0 || n % 2 == 0 )
+//            return false;
+//
+//        for (int i = 5; i * i <= n; i = i + 6)
+//
+//            if ( n % (i + 2) == 0 || n % i == 0)
+//                return false;
+//
+//        return true;
+//    }
 
 
     public static void main(String[] args) throws IOException {
 
-        Reader.init(System.in);
-
-            int no_gangs =Reader.nextInt();
-
-            for (int j=0 ;j<no_gangs; j++){
-               long x=Reader.nextInt();
-
-               //if( x==2) return;
-               while (!f(x)){
-
-                   x++;
-               }
-                System.out.println(x);
-
-            }
+//        Reader.init(System.in);
+//
+//            int no_gangs =Reader.nextInt();
+//
+//            for (int j=0 ;j<no_gangs; j++){
+//               long x=Reader.nextInt();
+//
+//               //if( x==2) return;
+//               while (!f(x)){
+//
+//                   x++;
+//               }
+//                System.out.println(x);
+//
+//            }
+        int N = 11;
+        int A[] = {11,16 ,19, 55, 60, 71, 76, 80, 88, 90, 90};
+        int M = 2;
+        System.out.println(Allocate_minimum_number_of_pages.findPages1(A,N,M));
 
 
 

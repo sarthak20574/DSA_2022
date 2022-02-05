@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.Arrays;
-
 public class Allocate_minimum_number_of_pages {
     // if the arr= { 12, 12, 12, 12} and the students= 4 then the min value is 12
     // if just students= 1 and arr= {10, 20, 30}, then the add all that will be the max= 10+20+30
@@ -64,6 +62,55 @@ public class Allocate_minimum_number_of_pages {
          return true;
 
     }
+
+
+// just wrote the code again for the Allocate the min number of pages HARD problem
+    public static int findPages1(int[]A,int N,int M)
+    {
+        //check that A.size>0
+        int low= A[0], high =0 ;
+
+        if(M>N ) return -1;
+
+        for( int i=0 ; i< N; i++){
+                high += A[i];
+
+        }
+        int ans = Integer.MAX_VALUE;
+        int mid;
+        while (low<=high){
+            mid= (low+high)/2;
+            if( !found(A,N,M,mid)){
+                low=mid+1;
+            }
+            else {
+                ans=mid;
+                high=mid-1;
+            }
+
+        }
+        return ans;
+    }
+
+    static boolean found( int A[], int n, int m, int testing_value){
+
+        int count_of_students_given=1, no_of_books_obtained_by_cur=0;
+
+        for( int i=0 ; i< n; i++){
+
+            if( testing_value<A[i]) return false;
+            if( testing_value>=no_of_books_obtained_by_cur+A[i]){
+                no_of_books_obtained_by_cur+=A[i];
+            }
+            else {
+                count_of_students_given++;
+                no_of_books_obtained_by_cur=A[i];
+                if( count_of_students_given>m) return false;
+            }
+        }
+        return true;
+    }
+
 
 
 }
