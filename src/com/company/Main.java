@@ -44,13 +44,8 @@ public class Main {
 //                System.out.println(x);
 //
 //            }
-        int N = 11;
-        int A[] = {11,16 ,19, 55, 60, 71, 76, 80, 88, 90, 90};
-        int M = 2;
-        System.out.println(Allocate_minimum_number_of_pages.findPages1(A,N,M));
 
-
-
+        System.out.println(Transfiguration_Transform_String.transfigure("GEEKSFORGEEKS","FORGEEKSGEEKS"));
 
 //        Reader.init(System.in);
 //        int tests=Reader.nextInt();
