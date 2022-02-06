@@ -29,6 +29,8 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
+        //System.out.println(NthNaturalNumber.findNth(11));
+
 //        Reader.init(System.in);
 //
 //            int no_gangs =Reader.nextInt();
@@ -45,7 +47,6 @@ public class Main {
 //
 //            }
 
-        System.out.println(Transfiguration_Transform_String.transfigure("GEEKSFORGEEKS","FORGEEKSGEEKS"));
 
 //        Reader.init(System.in);
 //        int tests=Reader.nextInt();
