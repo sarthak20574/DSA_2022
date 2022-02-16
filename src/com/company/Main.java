@@ -4,21 +4,20 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class Main {
 
 
 //    static boolean f(long n){
-//        if (n <= 3)
-//            return true;
 //
+//        if( n==0 || n==1) return false;
+//        if( n==2 || n==3) return true;
 //
 //        if ( n % 3 == 0 || n % 2 == 0 )
 //            return false;
 //
-//        for (int i = 5; i * i <= n; i = i + 6)
+//        for (int i = 5; i * i <= n; i+= 6)
 //
 //            if ( n % (i + 2) == 0 || n % i == 0)
 //                return false;
@@ -29,87 +28,66 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        //System.out.println(NthNaturalNumber.findNth(11));
 
 //        Reader.init(System.in);
+//        int tests= Reader.nextInt();
 //
-//            int no_gangs =Reader.nextInt();
+//        for( int i=0; i<tests;i++){
 //
-//            for (int j=0 ;j<no_gangs; j++){
-//               long x=Reader.nextInt();
+//            int n=Reader.nextInt();
 //
-//               //if( x==2) return;
-//               while (!f(x)){
+//            boolean no[]= new boolean[ n-1];
 //
-//                   x++;
-//               }
-//                System.out.println(x);
+//            for( int j=0 ;j< n-1;j++){
 //
+//                no[j]=true;
 //            }
-
-
-//        Reader.init(System.in);
-//        int tests=Reader.nextInt();
+//            for ( int l=2; l*l<=n-1;l++){
 //
-//        for (int i=0 ; i<tests; i++) {
-//            int n = Reader.nextInt();
-//            int x = Reader.nextInt();
-//            String str = Reader.nextLine();!
+//                if( no[l]==true){
+//                    for (int k=l*l;k<=n-2;k+=l){
+//                        no[k]=false;
+//                    }
 //
-//            if( n<x) {
-//                System.out.println(0);
-//                continue;
+//                }
 //            }
+//            long ans=0;
+//            for( int j=0 ;j< n-1;j++){
 //
-//            int ans[] = new int[n],count=0, index_ans=0;
-//            boolean used=false,inside=false;
-//            for (int j=0;j<n; j++){
-//
-//                count=0;
-//                while (j<n && str.charAt(j)=='0'){
-//                    used=true;
-//                    count++;
-//                    j++;
-////
+//                if(no[i]==true){
+//                    ans++;
 //                }
-//                while (j+1 < n && str.charAt(j+1)=='0' && used) {
-//                    inside=true;
-//                    count++;
-//                    j++;
-//                }
-//                if (used){
-//                    ans[index_ans++]=count+1;
-//
-//                    count=0;
-//                    used=false;
-//
-//                    //j++;
-//                }
-//
-//                }
-//
-//            int max=0;
-//            for(int j=0 ; j<n && ans[j]!=0; j++){
-////                if( max<ans[j]){
-//                    max+=ans[j];
-////                }
 //            }
 //
-//            if( x!=0)
-//            System.out.println(max/x);
-//            else System.out.println(x);
+//            System.out.println(ans);
+
+
+
+        //142857144
+        }
 //
-//        int N = 3;
-//        int arr[] = {1, 2, 1};
-//        int D = 2;
+//        int no_gangs =Reader.nextInt();
+//            int[] x=new int[no_gangs];
+//        long sum=0, min=Integer.MAX_VALUE, max=Integer.MIN_VALUE;
 //
-//        System.out.println(Allocate_minimum_number_of_pages.findPages(arr,N, D));
-
-
-
+//        for (int j=0 ;j<no_gangs-1; j++){
+//            x[j]=Reader.nextInt();
+//
+//            sum+=x[j];
+//            if( min>x[j]){
+//                min=x[j];
+//            }
+//            if( max<x[j]){
+//                max=x[j];
+//            }
+//
+//
+//
+//        }
+//        long req_sum= (long) (no_gangs *(max+min)/2);
+//        System.out.println(req_sum-sum);
 
         }
-
 
 
 
@@ -175,7 +153,7 @@ public class Main {
 //        p.map_method(a,b,size,size1);
 
 
-    }
+
 
 
 
