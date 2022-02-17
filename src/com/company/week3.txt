@@ -1,0 +1,33 @@
+Recursion
+Practice Questions:
+Easy
+a. leetcode.com/problems/n-th-tribonacci-number
+b. leetcode.com/problems/range-sum-of-bst
+c. leetcode.com/problems/minimum-distance-between-bst-nodes
+d. https://www.geeksforgeeks.org/program-chocolate-wrapper-puzzle/
+Medium
+a. leetcode.com/problems/diameter-of-binary-tree
+b. leetcode.com/problems/partition-to-k-equal-sum-subsets
+c. leetcode.com/problems/all-possible-full-binary-trees
+d. https://practice.geeksforgeeks.org/problems/knight-walk4521/1/
+Hard
+a. leetcode.com/problems/regular-expression-matching
+
+Divide and Conquer
+Practice Questions:
+https://leetcode.com/problems/sort-an-array
+https://leetcode.com/problems/maximum-subarray/description/
+https://leetcode.com/problems/majority-element/
+https://leetcode.com/problems/powx-n/
+https://leetcode.com/problems/merge-sorted-array/description/
+https://leetcode.com/problems/kth-largest-element-in-an-array
+
+Binary Search
+https://leetcode.com/problems/binary-search/description/
+https://leetcode.com/problems/valid-triangle-number/
+https://leetcode.com/problems/sqrtx/
+https://leetcode.com/problems/search-in-rotated-sorted-array/
+https://leetcode.com/problems/median-of-two-sorted-arrays/
+https://leetcode.com/problems/single-element-in-a-sorted-array/
+https://www.spoj.com/problems/AGGRCOW/
+https://codeforces.com/problemset/problem/760/B
