@@ -1,0 +1,50 @@
+Arrays:
+
+Online: An algorithm that can process and maintain sorted order, without having the entire input
+ available from the start.
+In-place: An algorithm that transforms input using no additional data structure, overwriting the
+input itself. However, a small constant extra space used for variables is allowed. Selection sort
+in an In-place sorting algorithm.
+
+Example: If the input can only be read once and you have to sort it as you go, you need an online sorting algorithm.
+
+Practice Questions: (in random order)
+https://leetcode.com/problems/maximum-subarray/
+https://leetcode.com/problems/sort-colors/
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+https://practice.geeksforgeeks.org/problems/inversion-of-array-1587115620/1/          done
+https://www.interviewbit.com/problems/subarray-with-given-xor/
+https://leetcode.com/problems/longest-substring-without-repeating-characters/
+https://practice.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1             done
+https://leetcode.com/problems/search-a-2d-matrix/
+https://www.geeksforgeeks.org/move-zeroes-end-array/
+https://www.interviewbit.com/problems/next-permutation/
+
+Strings
+
+Practice Questions:
+
+1. https://www.interviewbit.com/problems/longest-common-prefix/
+2. https://www.interviewbit.com/problems/add-binary-strings/
+3. https://www.interviewbit.com/problems/minimum-characters-required-to-make-a-string-palindromic/
+4. https://www.interviewbit.com/problems/reverse-the-string/
+5. https://www.interviewbit.com/problems/longest-palindromic-substring/
+6. https://www.interviewbit.com/problems/amazing-subarrays/
+7. https://www.geeksforgeeks.org/lexicographically-first-palindromic-string/
+8. https://www.interviewbit.com/problems/atoi/
+9. https://www.interviewbit.com/problems/integer-to-roman/
+
+Sieve of Eratosthenes
+This is an important technique to find all the prime numbers from 1 to N in  (N(log(logN))) time.
+If this is done naively, it would take O(N√N) time.
+
+Extended Euclidean Algorithm
+	It helps you to find the GCD of two numbers efficiently.
+
+Practice Questions:
+https://leetcode.com/problems/count-primes/
+https://www.interviewbit.com/problems/all-factors/
+https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/
+
+
+

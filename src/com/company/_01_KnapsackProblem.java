@@ -22,6 +22,7 @@ public class _01_KnapsackProblem {
     }
 
 
+
     static int NintoK(int maxWeight, int weights[], int values[], int lenght){
 
         // to include the 0 case so +1....counting from 1, 1st obj starts at the index 1
