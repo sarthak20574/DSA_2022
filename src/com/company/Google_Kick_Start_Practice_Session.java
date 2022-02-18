@@ -4,6 +4,8 @@ public class Google_Kick_Start_Practice_Session {
 
     //Q1 Centauri Prime(done easily)
     private static String getRuler(String kingdom) {
+
+        // use hash set for storing the vowels as then O(1) time complexity
         String ruler = "";
         int length=kingdom.length();
         String vowels="aeiouAEIOU";

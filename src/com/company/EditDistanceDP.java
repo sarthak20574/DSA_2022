@@ -6,7 +6,6 @@ public class EditDistanceDP {
     }
 
     public static int recursion3RaisedToN(String str1, String str2, int l1, int l2){
-
         if( l1==0) return l2;
 
         else  if( l2==0) return l1;
@@ -32,7 +31,9 @@ public class EditDistanceDP {
         storage= new int[n][l];
     }
 
-    public static int OnintoL(String s1, String s2, int l1, int l2){
+    public static int OnintoL(String s1, String s2){
+
+        int l1=s1.length() , l2= s2.length();
 
         initilize(l1+1,l2+1);
 
@@ -46,19 +47,14 @@ public class EditDistanceDP {
                 else if( i==0){
                     storage[i][j]= j;
                 }
-                else if( s1.charAt(i)==s2.charAt(j)){
-                    OnintoL(s1, s2, i-1, j-1);
+                else if( s1.charAt(i-1)==s2.charAt(j-1)){
+                    storage[i][j]= storage[i-1][j-1];
                 }
                 else {
-
                     storage[i][j]= 1+ minOf3(storage[i-1][j-1], storage[i][j-1], storage[i-1][j]);
-
                 }
-
             }
-
         }
-
         return storage[l1][l2];
     }
 
