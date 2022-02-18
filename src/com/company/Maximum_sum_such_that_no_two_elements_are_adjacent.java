@@ -22,14 +22,13 @@ public class Maximum_sum_such_that_no_two_elements_are_adjacent {
     }
 
 
-
-
     //take the cur ele or skip the cur ele
     //recursive
 
     static int[] dp= new int[1000001];
 
-    int findMaxSum(int arr[], int size_minus_1){
+    //
+    static int DP_with_withRecursion(int arr[], int size_minus_1){
 
         for (int i=0 ; i< size_minus_1; i++){
             dp[i]=-1;
@@ -37,7 +36,7 @@ public class Maximum_sum_such_that_no_two_elements_are_adjacent {
         return fn(arr,size_minus_1-1);
     }
 
-    int fn(int arr[], int size_minus_1){
+    static int fn(int arr[], int size_minus_1){
 
         if(size_minus_1<=-1) return 0;
 
@@ -47,5 +46,61 @@ public class Maximum_sum_such_that_no_two_elements_are_adjacent {
         int exclude_cur=fn(arr,size_minus_1-1);
         return dp[size_minus_1]=Math.max(including_cur,exclude_cur);
     }
+
+
+static public int withoutDP(int[] arr, int length){
+
+        int inclusive_sum=0/*n-2  sum  */, exclusive_sum=arr[0]; // n-1 sum
+        for( int i=1;i<length; i++){
+
+            int temp=Math.max(inclusive_sum+arr[i],exclusive_sum);
+            inclusive_sum=exclusive_sum;
+            exclusive_sum= temp;
+
+        }
+        return exclusive_sum;
+}
+
+
+static int[] storage= new int[1000001];
+static public int withDP( int[] arr, int length){
+        for( int i=0 ; i< length; i++){
+            storage[i]=-1;
+        }
+
+    return f(arr,length);
+
+}
+
+    private static int f(int[] arr, int lenght) {
+        storage[0]=arr[0];
+
+        if( lenght>1){
+            storage[1]= Math.max(arr[1],arr[0]);
+        }
+
+        else {
+            return storage[0];
+        }
+
+        for(int i =2 ; i< lenght; i++){
+
+            storage[i]= Math.max(storage[i-1],storage[i-2]+ arr[i]);
+        }
+
+        return storage[lenght-1];
+
+    }
+
+    //untested
+static  int recursive( int[]arr, int length) {
+
+    if (length == 0) return arr[0];
+    else if (length == -1) return 0;
+
+    else {
+        return Math.max(arr[length] + recursive(arr, length - 2), recursive(arr, length - 1));
+    }
+}
 
 }

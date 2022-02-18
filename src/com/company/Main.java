@@ -29,6 +29,9 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
 
+        System.out.println(EditDistanceDP.recursion3RaisedToN("horse","ros",5,3));
+
+
 //        Reader.init(System.in);
 //        int tests= Reader.nextInt();
 //
