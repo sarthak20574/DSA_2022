@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.PriorityQueue;
+
 public class Google_Kick_Start_Practice_Session {
 
     //Q1 Centauri Prime(done easily)
@@ -91,4 +93,41 @@ After the 6th paper, Jorge's H-index score is 3, since he has 3 papers with at l
 
         return hIndex;
     }
+
+
+    // need a ds that can store data is some order that we receive them and also that
+    // allows us to remove the citations easily.....use minheap
+
+    // store the citations in the heap only if its greater than cur hIndex( ans),
+    // also remove all elements that are less than or equal than the present elements
+    // the if length of the heap is heap is >= hIndex+1 then hIndex++
+
+
+    // in O(n log n)
+    public static int[] getHIndexScore(int[] citationsPerPaper){
+
+        int length= citationsPerPaper.length;
+        int[] ans= new int[length];
+
+        // heap
+        PriorityQueue<Integer> heap= new PriorityQueue<>();
+
+        int hIndex=0;
+        for( int i=0 ; i<length; i++){
+
+            if( hIndex<citationsPerPaper[i]){
+                heap.add(citationsPerPaper[i]);
+            }
+            while (!heap.isEmpty() && heap.peek()<= hIndex){
+                heap.poll();
+            }
+            if( hIndex+1<= heap.size()){
+                hIndex++;
+            }
+            ans[i]=hIndex;
+        }
+
+        return ans;
+    }
+
 }
