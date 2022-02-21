@@ -102,7 +102,6 @@ After the 6th paper, Jorge's H-index score is 3, since he has 3 papers with at l
     // also remove all elements that are less than or equal than the present elements
     // the if length of the heap is heap is >= hIndex+1 then hIndex++
 
-
     // in O(n log n)
     public static int[] getHIndexScore(int[] citationsPerPaper){
 
@@ -129,5 +128,19 @@ After the 6th paper, Jorge's H-index score is 3, since he has 3 papers with at l
 
         return ans;
     }
+
+
+
+    //Milk tea
+    // to find the best T, take the most occuring T
+    //1010 1001 1011........ for 1st its 1 as most occuring the 2nd one its 0, srd one its 1 and 4th one its
+    // it may fall in the forbidden group and can't be trusted, but we conclude that each bit decision is
+    // independent from each other, so given a binary bit of length L-1 we can generate Lth bit without
+    // considering the Lth bit
+    // size of the forbidden set id m so if we make M+1 tea atleast 1 is not in forbidden set
+
+    // forbidden={1111, 0111, 1011, 1101}, preference={1110, 1101, 1011} size of forbidden set=m=4 so need 5 elements
+    // in  S0="", S1="0, 1", S2="00, 01, 10, 11", S3={"000", "001", "011", "010", "100", "101", "110","111"},
+    // got 8 elements in S3 but need just m+1 or elements so score all and choose the top 5, sam in S4
 
 }
