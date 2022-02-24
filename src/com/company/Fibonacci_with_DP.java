@@ -2,7 +2,8 @@ package com.company;
 
 public class Fibonacci_with_DP {
 
-    // take a look at this too and do it in log(n)
+    // take a look at this too https://github.com/sarthak20574/DSA_2022/blob/master/src/fibonaccimatrix.png
+    // and do it in log(n)
 
     static int[] arr;
 
