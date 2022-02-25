@@ -4,6 +4,9 @@ import java.util.PriorityQueue;
 
 public class Google_Kick_Start_Practice_Session {
 
+
+    // incomplete
+
     //Q1 Centauri Prime(done easily)
     private static String getRuler(String kingdom) {
 

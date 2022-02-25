@@ -28,10 +28,11 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        
-        for( int i= 0 ; i<=10; i++){
-            System.out.println(i+" "+Fibonacci_with_DP.fib(i));
-        }
+
+        int set[] = { 3, 34, 4, 12, 5, 2 };
+        int sum = 9;
+        int n = set.length;
+        System.out.println(Subset_Sum_Problem_DP_25.recursion(set, n, sum));
 
 //        Reader.init(System.in);
 //        int tests= Reader.nextInt();
