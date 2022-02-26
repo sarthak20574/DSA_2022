@@ -29,10 +29,10 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
 
-        int set[] = { 3, 34, 4, 12, 5, 2 };
-        int sum = 9;
+        int set[] = {2, 3, 5, 6, 8, 10 };
+        int sum = 10;
         int n = set.length;
-        System.out.println(Subset_Sum_Problem_DP_25.recursion(set, n, sum));
+        System.out.println(Subset_Sum_Problem_DP_25.DP(n,set, sum));
 
 //        Reader.init(System.in);
 //        int tests= Reader.nextInt();
