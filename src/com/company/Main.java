@@ -4,9 +4,25 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.List;
 import java.util.StringTokenizer;
 
 public class Main {
+
+    public static List<String> bigSorting(List<String> unsorted) {
+
+        String[] ans= unsorted.toArray(new String[0]);
+        Arrays.sort(ans,(left, ryt) -> {
+            if (left.length() != ryt.length()) {
+                return left.length() - ryt.length();
+            }
+            return left.compareTo(ryt);
+        });
+
+        return List.of(ans);
+
+    }
 
 
 //    static boolean f(long n){
