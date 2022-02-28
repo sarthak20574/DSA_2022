@@ -10,19 +10,6 @@ import java.util.StringTokenizer;
 
 public class Main {
 
-    public static List<String> bigSorting(List<String> unsorted) {
-
-        String[] ans= unsorted.toArray(new String[0]);
-        Arrays.sort(ans,(left, ryt) -> {
-            if (left.length() != ryt.length()) {
-                return left.length() - ryt.length();
-            }
-            return left.compareTo(ryt);
-        });
-
-        return List.of(ans);
-
-    }
 
 
 //    static boolean f(long n){
@@ -45,10 +32,12 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
 
-        int set[] = {2, 3, 5, 6, 8, 10 };
-        int sum = 10;
-        int n = set.length;
-        System.out.println(Subset_Sum_Problem_DP_25.DP(n,set, sum));
+//        int set[] = {2, 3, 5, 6, 8, 10 };
+//        int sum = 10;
+//        int n = set.length;
+//        System.out.println(Subset_Sum_Problem_DP_25.DP(n,set, sum));
+
+
 
 //        Reader.init(System.in);
 //        int tests= Reader.nextInt();
