@@ -11,7 +11,6 @@ import java.util.StringTokenizer;
 public class Main {
 
 
-
 //    static boolean f(long n){
 //
 //        if( n==0 || n==1) return false;
@@ -32,12 +31,9 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
 
-//        int set[] = {2, 3, 5, 6, 8, 10 };
-//        int sum = 10;
-//        int n = set.length;
-//        System.out.println(Subset_Sum_Problem_DP_25.DP(n,set, sum));
-
-
+        int arr[] = {6 ,3 ,7 ,4 ,6 ,9};
+        int n = arr.length;
+        System.out.println(LongestIncreasingSubsequence.longestSubsequence(n, arr));
 
 //        Reader.init(System.in);
 //        int tests= Reader.nextInt();
@@ -72,9 +68,8 @@ public class Main {
 //            System.out.println(ans);
 
 
-
         //142857144
-        }
+    }
 //
 //        int no_gangs =Reader.nextInt();
 //            int[] x=new int[no_gangs];
@@ -82,53 +77,13 @@ public class Main {
 //
 //        for (int j=0 ;j<no_gangs-1; j++){
 //            x[j]=Reader.nextInt();
-//
-//            sum+=x[j];
-//            if( min>x[j]){
-//                min=x[j];
-//            }
-//            if( max<x[j]){
-//                max=x[j];
-//            }
-//
-//
-//
-//        }
-//        long req_sum= (long) (no_gangs *(max+min)/2);
-//        System.out.println(req_sum-sum);
-
-        }
-
-
 
 //            int max_mem=Reader.nextInt();
-//
-//            int[] a = new int[n];
-//            int[] b = new int[n];
-//
-//            for (int j=0 ;j<n; j++){
-//                a[j]=Reader.nextInt();
-//            }
-//
-//            for (int j=0 ;j<n; j++){
-//                b[j]=Reader.nextInt();
-//            }
-////            System.out.println(Arrays.toString(a));
-////            System.out.println(Arrays.toString(b));
-//
-//            Activity[] activities= load(a,b);
-//
-//            printMaxActivities(activities,n,max_mem);
-
-        //      }
 
 
 //        CodeForcesXORORED obj= new CodeForcesXORORED();
 //        obj.f();
 
-
-//        substringOfString obj= new substringOfString();
-//        obj.method1("abcdef");
 
 //        Greedy greedy= new Greedy();
 //        Greedy.Activity[] activities= greedy.load(new int[]{5, 1, 3, 0, 5, 8}, new int[]{9, 2, 4, 6, 7, 9});
@@ -163,8 +118,7 @@ public class Main {
 //        p.map_method(a,b,size,size1);
 
 
-
-
+}
 
 
 
