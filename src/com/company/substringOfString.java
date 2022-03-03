@@ -3,6 +3,7 @@ package com.company;
 import java.util.HashSet;
 
 public class substringOfString {
+    // wrong
 
     public void method1(String string){
         int length= string.length();

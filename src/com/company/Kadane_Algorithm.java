@@ -44,6 +44,38 @@ public class Kadane_Algorithm {
 
     }
 
+    // DP in C++
+
+//    long long maxSubarraySum(int arr[], int n){
+//
+//        long long DP[n+1];
+//        DP[0]=0;
+//
+//        for( int i=1;i<=n;i++){
+//            DP[i]= max((long long)arr[i-1], DP[i-1]+((long long) arr[i-1]));
+//        }
+//
+//        long long ans=arr[0];
+//        for( int i=1 ; i<=n; i++){
+//            //cout<<DP[i]<<" ";
+//            ans= max(DP[i], ans);
+//        }
+//
+//        return ans;
+//    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     //You are given a binary string str. In a single operation, you can choose two indices L and R such that 1 ≤ L ≤ R ≤ N and
     // complement the characters between L and R i.e strL, strL+1, …, strR. By complement, we mean change character 0 to 1 and
