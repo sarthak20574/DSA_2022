@@ -1,5 +1,8 @@
 package com.company;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class _01_KnapsackProblem {
 
     //naive problem, start traversing from the back and 2 options either include or don't include the object
@@ -49,7 +52,10 @@ public class _01_KnapsackProblem {
             }
         }
 
-        return storage[lenght][maxWeight];
+//        System.out.println(Arrays.deepToString(storage));
+
+
+                return storage[lenght][maxWeight];
     }
 
 

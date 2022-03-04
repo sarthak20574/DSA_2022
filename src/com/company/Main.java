@@ -30,10 +30,11 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-
-        int arr[] = {6 ,3 ,7 ,4 ,6 ,9};
-        int n = arr.length;
-        System.out.println(LongestIncreasingSubsequence.longestSubsequence(n, arr));
+        int val[] = new int[] { 60, 100, 120 };
+        int wt[] = new int[] { 10, 20, 30 };
+        int W = 50;
+        int n = val.length;
+        System.out.println(_01_KnapsackProblem.NintoK(W, wt, val, n));
 
 //        Reader.init(System.in);
 //        int tests= Reader.nextInt();
