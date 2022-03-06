@@ -11,6 +11,14 @@ import java.util.StringTokenizer;
 public class Main {
 
 
+    int f(int[] arr,int i,int j){
+
+        if( i>j) return 0;
+
+        return Math.min(arr[i]+f(arr,i-2,j),arr[j]+f(arr,i-1,j-1));
+    }
+
+
 //    static boolean f(long n){
 //
 //        if( n==0 || n==1) return false;
