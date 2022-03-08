@@ -38,11 +38,11 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        int val[] = new int[] { 60, 100, 120 };
-        int wt[] = new int[] { 10, 20, 30 };
-        int W = 50;
-        int n = val.length;
-        System.out.println(_01_KnapsackProblem.NintoK(W, wt, val, n));
+        int val[] = new int[] {1 ,2 ,5 ,6 ,6, 7, 9 ,16 ,16 ,17 ,19} ;//{6, 14 ,17};
+        int wt[] = new int[] {1, 3 ,3 ,5 ,6 ,6, 11, 13, 13, 17, 17, 18, 19, 20} ;//{6, 6, 11, 15, 16};
+
+        int X = 28;
+        System.out.println(Find_the_closest_pair_from_two_arrays.printClosest(val, wt, val.length, wt.length, X));
 
 //        Reader.init(System.in);
 //        int tests= Reader.nextInt();
