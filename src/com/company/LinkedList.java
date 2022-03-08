@@ -3,7 +3,7 @@ package com.company;
 import java.util.HashSet;
 
 public class LinkedList {
-    class Node{
+    static class Node{
         int value;
         Node next;
 
