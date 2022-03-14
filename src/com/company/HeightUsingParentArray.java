@@ -2,6 +2,8 @@ package com.company;
 
 public class HeightUsingParentArray {
 
+    //https://www.youtube.com/watch?v=cvk_40InwAE
+
     // parent array gives you the parent at each index
     //0 has children 1 and 2, 1 has  3 and 4, 4 has 6 and, 7, 7 has 9 and 10, 9 has 11, 11 hs 12, 2 has 5, 5 has 8
     // so now parent arrasy=[-1, 0, 0, 1, 1, 2,4,4,5,7,7,9,11]
