@@ -6,11 +6,6 @@ import java.util.Arrays;
 public class GFTSHP {
     public static void main(String[] args) throws IOException {
 
-        for( int i=1 ; i<= 53; i++){
-            System.out.println(i+": "+fn(i));
-        }
-
-        System.out.println(26+": "+fn(27));
 
 
        // System.out.println(0%26);
