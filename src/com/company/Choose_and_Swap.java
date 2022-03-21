@@ -3,7 +3,7 @@ package com.company;
 public class Choose_and_Swap {
 
     //char array of 156 letters {a,b,c,d,e,...z}
-    //for ccad , we store the first index of the letter inthe array
+    //for ccad , we store the first index of the letter inthe array(lexically sorted)
     // {2,-1,0,3...-1,}
     // now for c 1st lwtter in ccad we get, so all the numbers that are >0 before c...yes 2 with a
     // swap c and a
