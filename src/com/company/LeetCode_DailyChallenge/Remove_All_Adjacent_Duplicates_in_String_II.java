@@ -4,6 +4,7 @@ public class Remove_All_Adjacent_Duplicates_in_String_II {
 
     //1209. Remove All Adjacent Duplicates in String II
     //https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/
+    //https://www.youtube.com/watch?v=w6LcypDgC4w&ab_channel=NeetCode
 
 // not my code
 public String removeDuplicates(String s, int k) {
