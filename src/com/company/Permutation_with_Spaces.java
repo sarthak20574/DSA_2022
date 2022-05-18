@@ -5,7 +5,8 @@ import java.util.Collections;
 
 public class Permutation_with_Spaces {
     //Permutation with Spaces in gfg
-
+    //https://www.youtube.com/watch?v=1cspuQ6qHW0
+    //https://practice.geeksforgeeks.org/problems/permutation-with-spaces3627/1#
     static ArrayList<String> permutation(String S){
 
         // 2choices either include the letter with or without spaces
