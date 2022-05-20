@@ -49,4 +49,41 @@ public class Transfiguration_Transform_String {
         return ans;
     }
 
+    /*
+
+int transform (string A, string B)
+   {
+       unordered_map<char, int> map;
+       int ans=0;
+
+       int n= A.size();
+       int m= A.size();
+
+
+       for( auto i: A) {
+           map[i]++;
+       }
+       for( auto i: B){
+           map[i]--;
+       }
+
+       for(auto i: map){
+           if( i.second!=0) return -1;
+       }
+
+       int i= n-1;  int  j= m-1;
+
+       while( i>=0 && j>=0){
+           if( A[i]== B[j]){
+               i--;
+               j--;
+           }
+           else{
+               j--;
+               ans++;
+
+           }
+       }
+     */
+
 }
