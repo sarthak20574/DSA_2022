@@ -1,3 +1,5 @@
+package com.company.LeetCode_DailyChallenge;
+
 import java.util.HashMap;
 import java.util.Map;
 

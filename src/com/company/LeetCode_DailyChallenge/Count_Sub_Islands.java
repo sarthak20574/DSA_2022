@@ -1,3 +1,5 @@
+package com.company.LeetCode_DailyChallenge;
+
 public class Count_Sub_Islands {
 
     //1905. Count Sub Islands
