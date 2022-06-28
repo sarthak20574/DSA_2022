@@ -31,7 +31,7 @@ public class Count_pairs_in_array_divisible_by_K {
     }
 
     /*
-    //in cpp
+    //in Rotting_Oranges
 
     long long countKdivPairs(int A[], int n, int k)
     {
@@ -53,6 +53,6 @@ public class Count_pairs_in_array_divisible_by_K {
     return ans;
     }
      */
-    //in cpp
+    //in Rotting_Oranges
 
 }

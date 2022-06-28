@@ -28,7 +28,7 @@ public class Nearly_sorted {
         return ans;
     }
 
-    //in cpp
+    //in Rotting_Oranges
     /*
     vector <int> nearlySorted(int arr[], int num, int k){
 

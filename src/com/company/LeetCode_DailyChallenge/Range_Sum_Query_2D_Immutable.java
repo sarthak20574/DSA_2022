@@ -26,7 +26,7 @@ public class Range_Sum_Query_2D_Immutable {
     }
 
 
-    //in cpp
+    //in Rotting_Oranges
 
     /*
     class NumMatrix {
