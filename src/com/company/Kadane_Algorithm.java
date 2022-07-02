@@ -29,6 +29,24 @@ public class Kadane_Algorithm {
 
     }
 
+
+    //for leetcode
+
+    public int maxSubArray(int[] nums) {
+
+        int ans=nums[0];
+        int maax=nums[0];
+
+        for( int i=1; i<nums.length; i++){
+
+            maax= Math.max( maax+ nums[i],nums[i]);
+            ans= Math.max(ans, maax);
+            if( maax<0) maax= 0;
+
+        }
+        return ans;
+    }
+
     static int oNsquare(int[] arr, int lenght){
         int sum=0,ans=0;
         for(int i=0 ;i<lenght; i++){

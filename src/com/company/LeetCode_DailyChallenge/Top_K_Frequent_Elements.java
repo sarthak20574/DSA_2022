@@ -1,8 +1,6 @@
 package com.company.LeetCode_DailyChallenge;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class Top_K_Frequent_Elements {
     //347. Top K Frequent Elements
@@ -36,6 +34,41 @@ public class Top_K_Frequent_Elements {
         return ans;
     }
     // or can store in a max heap and output(poll) the first k elements as the answer
+
+
+    //https://www.youtube.com/watch?v=YPTqKIgVk-k&ab_channel=NeetCode
+    // bucket sort in O(N)
+    public int[] topKFrequent2(int[] nums, int k) {
+
+        Map<Integer, Integer> map= new HashMap<>();
+
+        for( int i=0; i< nums.length; i++){
+            map.put(nums[i], map.getOrDefault(nums[i], 0)+1);
+        }
+
+        List<Integer>[] bucket = new List[nums.length + 1];
+
+        for(int i: map.keySet()){
+
+            if( bucket[map.get(i)]==null){
+                bucket[map.get(i)]= new ArrayList<>();
+            }
+            bucket[map.get(i)].add(i);
+        }
+
+        int[] ans = new int[k];
+        int j=0;
+        for( int i= nums.length ;i>=0 ; i--){
+            if( bucket[i]!= null){
+                for( int x: bucket[i]){
+                    ans[j++]= x;
+                    if( j==k)return ans;
+                }
+            }
+
+        }
+        return ans;
+    }
 
 
 }

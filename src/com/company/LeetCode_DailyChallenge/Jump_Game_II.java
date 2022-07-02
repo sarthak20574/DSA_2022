@@ -1,4 +1,4 @@
-package com.company;
+package com.company.LeetCode_DailyChallenge;
 
 public class Jump_Game_II {
     //45. Jump Game II
