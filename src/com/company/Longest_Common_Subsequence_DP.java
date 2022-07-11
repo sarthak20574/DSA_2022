@@ -24,4 +24,33 @@ public class Longest_Common_Subsequence_DP {
         return dp[x][y];
     }
 
+    //https://www.youtube.com/watch?v=on2hvxBXJH4&ab_channel=takeUforward
+
+    /*
+     int lengthOfLIS(vector<int>& nums) {
+
+        int ans=1;
+        vector<int> dp;
+
+        int n= nums.size();
+
+        dp.push_back(nums[0]);
+
+        for( int i=1; i<n ;i++ ){
+
+            if( dp.back()<nums[i]){
+                dp.push_back(nums[i]);
+                ans++;
+            }
+            else{
+                int x= (lower_bound( dp.begin(),dp.end(), nums[i])-dp.begin());
+                dp[x]= nums[i];
+            }
+        }
+
+        return ans;
+
+    }
+     */
+
 }

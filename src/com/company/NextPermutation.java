@@ -6,6 +6,8 @@ import java.util.List;
 
 public class NextPermutation {
 
+    //https://www.youtube.com/watch?v=quAS1iydq7U&ab_channel=BackToBackSWE
+
     // 123 -> 132
     //321 -> 123  02 just retunr an empty araay
     //152 -> 215
