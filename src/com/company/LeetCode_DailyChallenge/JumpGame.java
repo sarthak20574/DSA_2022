@@ -17,4 +17,34 @@ public class JumpGame {
         return max_reach>=n-1;
     }
          */
+
+    public boolean canJump(int[] nums) {
+
+        int n= nums.length;
+
+        //here max denotes the maximum index upto which we can jump
+        int max=0, i=0;
+
+        // while we can still jump, ie, our max jump is greater than or equal to our 'i'
+        while(i<=max){
+
+            // we try to maximize our jumps...
+            max= Math.max(i+nums[i],max);
+
+            // if we reacht the last index then done
+            if(max>=n-1) return true;
+
+            i++;
+        }
+
+        //we will reach here only if we never reached the last index
+        return false;
+
+    }
+
+  /*
+  time complexity= O(n)
+    Space Complexity= O(1)
+
+   */
 }
