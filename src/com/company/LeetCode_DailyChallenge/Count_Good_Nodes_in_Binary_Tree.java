@@ -1,10 +1,6 @@
 package com.company.LeetCode_DailyChallenge;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Pacific_Atlantic_Water_Flow {
-
+public class Count_Good_Nodes_in_Binary_Tree {
 
 
     //1448. Count Good Nodes in Binary Tree
@@ -36,4 +32,5 @@ public class Pacific_Atlantic_Water_Flow {
             fn(r.right, max);
         }
     }
+
 }
