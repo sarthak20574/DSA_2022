@@ -34,4 +34,44 @@ public class Longest_Subsequence_With_Limited_Sum {
 
 
     }
+
+    public int[] answerQueries1(int[] nums, int[] queries) {
+
+        Arrays.sort( nums);
+        int n= nums.length;
+
+        for( int i=1; i<n; i++){
+            nums[i]= nums[i-1]+ nums[i];
+        }
+
+        int q= queries.length;
+
+        int[] ans= new int[q];
+        for( int i=0; i<q; i++){
+
+            ans[i]= fn( nums, queries[i]);
+        }
+
+        return ans;
+    }
+
+    int fn( int[] nums, int sum){
+
+        int mid, low=0, high=nums.length-1, ans=-1;
+
+        while( low<= high){
+            mid= ( low+high)/2;
+
+            if( nums[mid]<= sum){
+                ans= mid;
+                low= mid+1;
+            }
+            else{
+                high= mid-1;
+            }
+
+        }
+        return ans+1;
+
+    }
 }

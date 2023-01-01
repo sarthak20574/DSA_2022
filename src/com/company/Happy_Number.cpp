@@ -30,3 +30,34 @@
 
     // can be done with a hash set to see iof any of the elemnts are repating...
     //https://www.youtube.com/watch?v=gW4hSbRoQoY
+
+// coded this after months
+     public boolean isHappy(int n) {
+
+            Set<Integer> x= new HashSet<>();
+
+            int cur=n;
+           // x. add(1);
+
+
+            while( x.contains(cur)==false){
+                int s=0;
+                 x.add( cur);
+                 //System.out.println(" cur= "+ cur);
+                while(cur>0){
+                    int dig= cur%10;
+                    cur=cur/10;
+                    s+= dig*dig;
+                }
+                 //System.out.println("sum = "+s);
+                cur= s;
+            }
+
+           // System.out.println(cur);
+
+            // for( int i: x){
+            //     System.out.println(i);
+            // }
+            return cur==1;
+
+        }

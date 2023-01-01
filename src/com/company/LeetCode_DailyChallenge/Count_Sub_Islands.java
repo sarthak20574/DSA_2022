@@ -46,4 +46,53 @@ public class Count_Sub_Islands {
         else return true;
     }
      */
+
+    public int countSubIslands(int[][] grid1, int[][] grid2) {
+        int ans=0, n= grid2.length, m= grid2[0].length;
+
+        for( int i=0; i<n; i++){
+            for( int j=0; j<m; j++){
+                if( grid2[i][j]==1 && grid1[i][j]==1){
+                    //grid2[i][j]=0;
+                    if(fn( grid1, grid2, i, j, n, m)==true){
+                        //System.out.println(i+ " : "+j);
+                        ans++;
+                    }
+
+                }
+            }
+        }
+        return ans;
+    }
+
+    boolean fn( int[][] grid1,  int[][] grid2, int i, int j, int n, int m){
+        int[][] dirs= {{0,1}, {0,-1}, {1,0}, {-1,0}};
+
+        grid2[i][j]=0;
+
+
+        boolean res= true;
+        for( int k=0; k<4; k++){
+            int x= i+ dirs[k][0];
+            int y= j+ dirs[k][1];
+
+            if( x>=0 && y>=0 && x<n && y<m && grid2[x][y]==1){
+                //grid2[x][y]=0;
+                //  System.out.println(x+ " : "+y);
+                if( grid1[x][y]==1){
+                    // System.out.println(x+ " : "+y);
+
+                    res = res & fn( grid1, grid2, x, y, n, m);
+                }
+                else {
+                    fn( grid1, grid2, x, y, n, m);
+                    res = false;
+                }
+            }
+
+        }
+
+        return res;
+    }
+
 }
