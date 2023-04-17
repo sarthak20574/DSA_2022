@@ -1,18 +1,19 @@
 package com.company.LeetCode_DailyChallenge;
 
+class ListNode {
+    int val;
+    ListNode next;
+    ListNode(int x) {
+        val = x;
+        next = null;
+    }
+}
 public class Partition_List {
 
     //86. Partition List
     //https://leetcode.com/problems/partition-list/
 
-    public class ListNode {
-        int val;
-       ListNode next;
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
+
 
     public ListNode partition(ListNode head, int x) {
 

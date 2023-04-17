@@ -7,6 +7,8 @@ public class Make_the_array_beautiful {
 
     //Make the array beautiful
     //https://practice.geeksforgeeks.org/contest/interview-series-60/problems/#
+    //https://practice.geeksforgeeks.org/problems/badefd58bace4f2ca25267ccfe0c9dc844415e90/1
+
     public static ArrayList<Integer> makeBeautiful(int[] arr) {
         ArrayList<Integer> ans=new ArrayList<>();
 
