@@ -10,6 +10,8 @@ public class Number_of_Ways_to_Form_a_Target_String_Given_a_Dictionary {
 
     //top down
 
+    // learn the dp solution
+
     int mod= 1_000_000_007;
     int[][] freq;
     long[][] dp;
