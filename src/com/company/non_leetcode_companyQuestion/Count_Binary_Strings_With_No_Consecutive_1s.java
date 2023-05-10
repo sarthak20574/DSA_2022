@@ -10,7 +10,6 @@ public class Count_Binary_Strings_With_No_Consecutive_1s {
 
 
 
-    /
     int mod = 1_000_000_007;
 
     public int countStrings(long n) {
