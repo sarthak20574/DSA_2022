@@ -35,4 +35,39 @@ public class Longest_Consecutive_Sequence {
 
         return ans;
     }
+
+    //128. Longest Consecutive Sequence
+
+    public int longestConsecutive1(int[] nums) {
+
+        Set<Integer> s= new HashSet<>();
+        int ans=0;
+
+        for( int i: nums){
+            s.add(i);
+        }
+
+        for( int i: nums){
+
+            int len=1, cur=i+1;
+            if( s.contains(i)){
+                s.remove(i);
+                while(s.contains(cur)){
+                    cur++;
+                    len++;
+                    s.remove(cur-1);
+                }
+                cur=i-1;
+                while(s.contains(cur)){
+                    cur--;
+                    len++;
+                    s.remove(cur+1);
+                }
+            }
+            ans= Math.max(ans, len);
+        }
+
+
+        return ans;
+    }
 }
