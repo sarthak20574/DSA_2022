@@ -7,6 +7,10 @@ public class Valid_Parenthesis_String {
     //https://www.youtube.com/watch?v=QhPdNS143Qg&ab_channel=NeetCode
 
 
+    // nice solution too https://leetcode.com/problems/valid-parenthesis-string/solutions/582074/c-using-two-stacks/
+
+
+
     public boolean checkValidString(String s) {
 
         //Stack<Character> st= new Stack<>();
