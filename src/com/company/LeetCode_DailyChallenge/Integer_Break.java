@@ -5,6 +5,8 @@ public class Integer_Break {
     //343. Integer Break
     //https://leetcode.com/problems/integer-break/description/?envType=study-plan&id=dynamic-programming-i
     //https://www.youtube.com/watch?v=in6QbUPMJ3I&ab_channel=NeetCode
+    // O(1) solution https://leetcode.com/problems/integer-break/solutions/80785/o-log-n-time-solution-with-explanation/
+    
 
     public int integerBreak(int n) {
 
