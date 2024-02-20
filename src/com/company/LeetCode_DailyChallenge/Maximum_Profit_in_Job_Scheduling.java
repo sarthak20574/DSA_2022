@@ -8,9 +8,68 @@ public class Maximum_Profit_in_Job_Scheduling {
 
     //1235. Maximum Profit in Job Scheduling
     //https://leetcode.com/problems/maximum-profit-in-job-scheduling/description/
+
+    //https://www.youtube.com/watch?v=JLoWc3v0SiE&ab_channel=NeetCodeIO
+
+
+    int[] dp;
+    public int jobScheduling(int[] s, int[] e, int[] p) {
+
+        int n= s.length;
+        dp= new int[n+1];
+        Arrays.fill(dp, -1);
+
+        int[][] x= new int[n][3];
+
+        for( int i=0; i<n; i++){
+            x[i][0]=s[i];
+            x[i][1]=e[i];
+            x[i][2]=p[i];
+        }
+
+        Arrays.sort(x, (a, b)->a[0]-b[0]);
+
+        return fn(x, 0);
+    }
+
+    int fn( int[][] x, int i){
+        int n=x.length;
+
+        if( i==n) return 0;
+        if( dp[i]!=-1) return dp[i];
+
+        int cur= fn( x, i+1);
+        int prev=las(x, i);
+        cur= Math.max(  cur, x[i][2]+ fn(x, prev));
+
+        dp[i]= cur;
+
+        return cur;
+    }
+
+    int las( int[][] x, int i){
+        int n= x.length;
+
+        int l=i+1, h=n-1, ret=n;
+
+        while( l<=h){
+            int mid= l+(h-l)/2;
+
+            if( x[i][1]<=x[mid][0]){
+                ret=mid;
+                h=mid-1;
+            }
+            else l= mid+1;
+        }
+
+        return ret;
+    }
+
+
+
     //https://www.youtube.com/watch?v=cr6Ip0J9izc&ab_channel=TusharRoy-CodingMadeSimple
 
-    public int jobScheduling(int[] startTime, int[] endTime, int[] profit) {
+    public int jobScheduling2(int[] startTime, int[] endTime, int[] profit) {
 
 
         int n= startTime.length;

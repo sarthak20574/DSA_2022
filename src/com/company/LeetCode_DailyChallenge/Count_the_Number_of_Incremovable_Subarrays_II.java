@@ -3,6 +3,7 @@ package com.company.LeetCode_DailyChallenge;
 public class Count_the_Number_of_Incremovable_Subarrays_II {
     //2972. Count the Number of Incremovable Subarrays II
     //https://leetcode.com/problems/count-the-number-of-incremovable-subarrays-ii/
+    //https://www.youtube.com/watch?v=VmTxOpyPtIE&t=2120s
 
     public long incremovableSubarrayCount(int[] nums) {
 
