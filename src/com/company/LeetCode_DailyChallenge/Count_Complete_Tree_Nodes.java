@@ -1,5 +1,4 @@
-package com.company.LeetCode_DailyChallenge;
-
+import com.company.LeetCode_DailyChallenge.TreeNode;
 public class Count_Complete_Tree_Nodes {
 
     //222. Count Complete Tree Nodes
